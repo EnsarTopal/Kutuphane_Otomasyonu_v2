@@ -98,7 +98,7 @@ namespace Kutuphane_Otomasyonu_v2
             this.btn_tumKayitlar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_tumKayitlar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tumKayitlar.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_tumKayitlar.Location = new System.Drawing.Point(531, 111);
+            this.btn_tumKayitlar.Location = new System.Drawing.Point(623, 120);
             this.btn_tumKayitlar.Name = "btn_tumKayitlar";
             this.btn_tumKayitlar.Size = new System.Drawing.Size(76, 73);
             this.btn_tumKayitlar.TabIndex = 0;
