@@ -29,6 +29,7 @@ namespace Kutuphane_Otomasyonu_v2
             frmAna.Show();
             this.Hide();
         }
+
         private void btn_ogrenciArama_Click(object sender, EventArgs e)
         {
             //öğrenci tablosundan istediğimiz verileri çekip datagridview'e yüklüyoruz.
@@ -43,6 +44,7 @@ namespace Kutuphane_Otomasyonu_v2
                 MessageBox.Show("Geçersiz girdi!");
             }
         }
+
         private void btn_kitapArama_Click(object sender, EventArgs e)
         {
             //kitap tablosundan istediğimiz verileri çekip datagridview'e yüklüyoruz.
@@ -56,9 +58,10 @@ namespace Kutuphane_Otomasyonu_v2
                 MessageBox.Show("Kayıt Bulunamadı!");
             }
         }
+
         private void btn_emanetVer_Click(object sender, EventArgs e)
         {
-        //    dTP_emanetVerilenTarih.Value = DateTime.Now;
+            dTP_emanetVerilenTarih.Value = DateTime.Now;
 
             //emanetVermeIslemi fonksiyonuna gerekli parametreleri göndererek emanet verme işlemini yapıyoruz.
             try
@@ -77,20 +80,24 @@ namespace Kutuphane_Otomasyonu_v2
                 MessageBox.Show(err.Message);
             }
         }
+
         private void cmboxKitapKategori_SelectedIndexChanged(object sender, EventArgs e)
         {
             konum = cmboxKitapKategori.SelectedItem.ToString();
         }
+
         private void ogrenciKitapAlmaIade_Load(object sender, EventArgs e)
         {
             txt_geriGetirilmesiGerekenTarih.Text = DateTime.Now.AddDays(30).ToShortDateString();
         }
+
         private void btn_kitapEmanetListesi_Click(object sender, EventArgs e)
         {
             //kitapAlmaVerme tablosundaki verileri datagridview'e yüklemek için bu fonksiyonu kullanıyoruz.
             listele();
             // emanet_ve_iade_renk();
         }
+
         private void btn_iadeOgrenciArama_Click_1(object sender, EventArgs e)
         {
             //öğrenci tablosundan istediğimiz verileri çekip datagridview'e yüklüyoruz.
@@ -105,6 +112,7 @@ namespace Kutuphane_Otomasyonu_v2
                 MessageBox.Show("Kayıt Bulunamadı!");
             }
         }
+
         private void btn_iadeKitapAra_Click_1(object sender, EventArgs e)
         {
 
@@ -121,11 +129,11 @@ namespace Kutuphane_Otomasyonu_v2
                 MessageBox.Show("Kayıt Bulunamadı");
             }
         }
+
         private void btn_iadeEt_Click(object sender, EventArgs e)
         {
             kitapAlmaVerme kitap = new kitapAlmaVerme();
-            //txt_iadeEdilenTarih.Text = DateTime.Now.ToShortDateString();
-            /*
+            kitap.iadeTarihi = islemler.getKitapIadeTarihi(int.Parse(txt_iadeKitapId.Text)).ToString();
             DateTime geriGelenTarih = Convert.ToDateTime(txt_iadeEdilenTarih.Text);
             DateTime iadegelentarih = Convert.ToDateTime(kitap.iadeTarihi);
             TimeSpan sonuc = geriGelenTarih - iadegelentarih;
@@ -137,16 +145,16 @@ namespace Kutuphane_Otomasyonu_v2
                     float ceza = float.Parse(sonuc.TotalDays.ToString()) - 15;  //15 gün teslim süresini aşanlara hergün için 1 tl kesildi
                     float iade = Convert.ToInt32(kitap.borc); //Ceza bilgisi çekildi
                     iade += ceza; //üzerine ekleme yapıldı     
-                    islemler.iadeTablosuDuzenle(iade);
+                    islemler.iadeTablosuDuzenle(int.Parse(txt_iadeKitapId.Text), int.Parse(txt_iadeOgrenciId.Text), iade);
                     MessageBox.Show("iade → " + iade + "ceza → " + ceza);
                 }
-                MessageBox.Show("Teslim edildi");
             }
             else
             {
                 MessageBox.Show("Teslim tarihi alım tarihinden önce olamaz!");
             }
-            */
+
+            #region iade_islemi
             //tablo_iade_duzenleme fonksiyonuna gerekli parametreleri göndererek iade etme işlemini yapıyoruz. 
             try
             {
@@ -163,8 +171,10 @@ namespace Kutuphane_Otomasyonu_v2
                 MessageBox.Show("İade işlemi için lütfen alanları doldurunuz!");
             } //teslim işlemi gerçekleştirildi
             listele();
+            #endregion
 
         }
+
         private void dgv_emanetListesi_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             //dataGridView'de hangi satıra tıklanıldığı bulunup o satırdaki veriler gerekli textbox kontrollerine aktarılıyor.
@@ -172,11 +182,13 @@ namespace Kutuphane_Otomasyonu_v2
             txt_iadeOgrenciId.Text = dgv_emanetListesi.CurrentRow.Cells[1].Value.ToString();
             txt_iadeEdilenTarih.Text = dgv_emanetListesi.CurrentRow.Cells[4].Value.ToString();
         }
+
         void listele()
         {
             List<kitapAlmaVerme> listele = islemler.alımIadeGoster();
             dgv_emanetListesi.DataSource = listele;
         }
+
         public void emanet_ve_iade_renk()
         {
             double ceza = 0;
@@ -220,7 +232,6 @@ namespace Kutuphane_Otomasyonu_v2
                 }
             }
         }
-
 
     }
 }

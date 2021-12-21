@@ -38,13 +38,16 @@ namespace BL
             }
             return null;
         }
-        public int iadeTablosuDuzenle(float borc)
+
+        public int iadeTablosuDuzenle(int kitapId, int ogrenciId, double borc)
         {
             //kitapAlmaVerme tablosundaki verileri güncellemek için sorgumuzu gönderiyoruz.
             int Sonuc = dataAccess.EkleSilGuncelle(
-                "update kitapAlmaVerme set borc='" + borc , System.Data.CommandType.Text);
+                "update kitapAlmaVerme set borc='" + borc + "' where ogrenciId=" + ogrenciId +
+                " and kitapId = " + kitapId + "", CommandType.Text);
             return Sonuc;
         }
+
         public int iadeTablosuDuzenle(int kitapId, int ogrenciId, string islemTuru, string geriGetirmeTarihi)
         {
             //kitapAlmaVerme tablosundaki verileri güncellemek için sorgumuzu gönderiyoruz.
@@ -55,6 +58,7 @@ namespace BL
                 " and kitapId = " + kitapId + "", System.Data.CommandType.Text);
             return Sonuc;
         }
+
         public List<kitapAlmaVerme> ogrenciKaydiListeleme(int ogrenciNumarasi)
         {
             //listelemek istediğimiz verileri veritabanından çekiyoruz.
@@ -120,6 +124,7 @@ namespace BL
             }
             return null;
         }
+
         public List<kitapAlmaVerme> kitapKaydiListeleme(string deger, string yer)
         {
             //listelemek istediğimiz verileri veritabanından çekiyoruz.
@@ -147,6 +152,33 @@ namespace BL
                 return islem_kayit;
             }
             return null;
+        }
+
+        public DateTime getKitapIadeTarihi(int kitapId)
+        {
+            OleDbDataReader dr = dataAccess.DRVeriCek("select * from kitapAlmaVerme where kitapId=" + kitapId, CommandType.Text);
+            if (dr.HasRows)
+            {
+                //veritabanından çektiğimiz verileri liste olarak geri gönderiyoruz.
+                kitapAlmaVerme iade = new kitapAlmaVerme();
+                while (dr.Read())
+                {
+                    kitapAlmaVerme kaydet = new kitapAlmaVerme
+                    {
+                        kitapId = int.Parse(dr["kitapId"].ToString()),
+                        ogrenciId = int.Parse(dr["ogrenciId"].ToString()),
+                        alımTarihi = dr["alımTarihi"].ToString(),
+                        iadeTarihi = dr["iadeTarihi"].ToString(),
+                        geriGetirmeTarihi = dr["geriGetirmeTarihi"].ToString(),
+                        borc = dr["borc"].ToString(),
+                        islemTuru = dr["islemTuru"].ToString()
+                    };
+                    iade = kaydet;
+                }
+                return Convert.ToDateTime(iade.iadeTarihi);
+            }
+            return DateTime.Now;
+
         }
     }
 }
