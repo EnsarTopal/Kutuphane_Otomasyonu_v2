@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D5091025-5442-4B7E-A731-BEFB93AECB1A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Kutuphane_Otomasyonu_v2</RootNamespace>
+    <AssemblyName>Kutuphane_Otomasyonu_v2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="almaVermeGosterim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="almaVermeGosterim.Designer.cs">
+      <DependentUpon>almaVermeGosterim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="anaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaEkran.Designer.cs">
+      <DependentUpon>anaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grafik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Grafik.Designer.cs">
+      <DependentUpon>Grafik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kitapSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kitapSayfasi.Designer.cs">
+      <DependentUpon>kitapSayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciAlmaVermeGosterimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciAlmaVermeGosterimi.Designer.cs">
+      <DependentUpon>ogrenciAlmaVermeGosterimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciKitapAlmaIade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciKitapAlmaIade.Designer.cs">
+      <DependentUpon>ogrenciKitapAlmaIade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ogrenciSayfasi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ogrenciSayfasi.Designer.cs">
+      <DependentUpon>ogrenciSayfasi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="almaVermeGosterim.resx">
+      <DependentUpon>almaVermeGosterim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="anaEkran.resx">
+      <DependentUpon>anaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Grafik.resx">
+      <DependentUpon>Grafik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kitapSayfasi.resx">
+      <DependentUpon>kitapSayfasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciAlmaVermeGosterimi.resx">
+      <DependentUpon>ogrenciAlmaVermeGosterimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciKitapAlmaIade.resx">
+      <DependentUpon>ogrenciKitapAlmaIade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ogrenciSayfasi.resx">
+      <DependentUpon>ogrenciSayfasi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{b3a9ac4e-40ba-41b1-8d11-c7ef09c44a59}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{849503b1-2683-4753-ae82-039c6ac70584}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{917f6dc9-d88b-4dc2-9cc0-a4317bb2a940}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADOX">
+      <Guid>{00000600-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
