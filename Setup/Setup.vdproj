@@ -16,31 +16,19 @@
         "Entry"
         {
         "MsmKey" = "8:_12E551D2AC568EEA430F79C6FBA2B8A1"
-        "OwnerKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
+        "OwnerKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_57F9A3817168EE3C4FF93F53D0D880A5"
-        "OwnerKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_771DB98A571C494794973EDBC2B5D553"
-        "OwnerKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_95474E2860822479DCDD7C4507088470"
-        "OwnerKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
+        "OwnerKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -52,7 +40,19 @@
         "Entry"
         {
         "MsmKey" = "8:_9CE7846475029D9856050C6FF7A9C228"
-        "OwnerKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
+        "OwnerKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AD68F513419E4EDBA53DA534C8C3F96F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -64,25 +64,19 @@
         "Entry"
         {
         "MsmKey" = "8:_E4E1E9A36BC7A0C4648551AE1220FF91"
-        "OwnerKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
+        "OwnerKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_F4510753823C43C38B7CD5EDE158C6F3"
+        "MsmKey" = "8:_F35A5D87C668452087BADE83117D388A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_12E551D2AC568EEA430F79C6FBA2B8A1"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5A56F82FCDE44DC6855031A301D8386B"
+        "OwnerKey" = "8:_B07267EA6A32442BB76F48515DE9591A"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -107,6 +101,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E4E1E9A36BC7A0C4648551AE1220FF91"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_12E551D2AC568EEA430F79C6FBA2B8A1"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -134,6 +134,9 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                }
             }
         }
         "Release"
@@ -158,6 +161,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -250,26 +261,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_771DB98A571C494794973EDBC2B5D553"
-            {
-            "SourcePath" = "8:..\\Kutuphane_Otomasyonu_v2\\bin\\Debug\\Kutuphane_Otomasyonu.mdb"
-            "TargetName" = "8:Kutuphane_Otomasyonu.mdb"
-            "Tag" = "8:"
-            "Folder" = "8:_AE40AD55EC64446CABA63E5B92EE4DF0"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_95474E2860822479DCDD7C4507088470"
             {
             "AssemblyRegister" = "3:1"
@@ -332,6 +323,26 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AD68F513419E4EDBA53DA534C8C3F96F"
+            {
+            "SourcePath" = "8:..\\Kutuphane_Otomasyonu_v2\\bookshelf.ico"
+            "TargetName" = "8:bookshelf.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_AE40AD55EC64446CABA63E5B92EE4DF0"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E4E1E9A36BC7A0C4648551AE1220FF91"
             {
             "AssemblyRegister" = "3:1"
@@ -363,10 +374,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F4510753823C43C38B7CD5EDE158C6F3"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F35A5D87C668452087BADE83117D388A"
             {
-            "SourcePath" = "8:..\\Kutuphane_Otomasyonu_v2\\bookshelf.ico"
-            "TargetName" = "8:bookshelf.ico"
+            "SourcePath" = "8:..\\Kutuphane_Otomasyonu_v2\\bin\\Debug\\Kutuphane_Otomasyonu.mdb"
+            "TargetName" = "8:Kutuphane_Otomasyonu.mdb"
             "Tag" = "8:"
             "Folder" = "8:_AE40AD55EC64446CABA63E5B92EE4DF0"
             "Condition" = "8:"
@@ -451,7 +462,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Library Automation"
         "ProductCode" = "8:{781C08CC-079E-4744-B653-3305671C843D}"
-        "PackageCode" = "8:{BD6B5A96-8CD2-48C2-95A0-228080A9A996}"
+        "PackageCode" = "8:{A6277EE7-8074-40E8-BE46-3F0BBFF88EAC}"
         "UpgradeCode" = "8:{F036072D-7E7D-4C01-92B1-5766EE3EB74F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -459,8 +470,8 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Ensar Topal"
-        "ARPHELPTELEPHONE" = "8:"
+        "Manufacturer" = "8:Library Automation"
+        "ARPHELPTELEPHONE" = "8:+90 545 267 2611"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup"
         "Subject" = "8:"
@@ -468,7 +479,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Library Automation"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_F4510753823C43C38B7CD5EDE158C6F3"
+        "ARPPRODUCTICON" = "8:_AD68F513419E4EDBA53DA534C8C3F96F"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -571,7 +582,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_46FAE905F5404865ACBBFAA0422CEC95"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_3FB3BBB91F594AD1B6324E31BA0ABBE4"
             {
             "Name" = "8:Kutuphane Otomasyonu"
             "Arguments" = "8:"
@@ -579,13 +590,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_5A56F82FCDE44DC6855031A301D8386B"
-            "Folder" = "8:_BDB0343AD8E441B5B5F1FB5F5BF84FE1"
+            "Target" = "8:_B07267EA6A32442BB76F48515DE9591A"
+            "Folder" = "8:_90D4A0DC45B74D099C76B7949C2AD5B4"
             "WorkingFolder" = "8:_AE40AD55EC64446CABA63E5B92EE4DF0"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BDB659328C824638A5A21D0DB0CFCEC1"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F3CBDD19729B427DBC857D4436C06A8B"
             {
             "Name" = "8:Kutuphane Otomasyonu"
             "Arguments" = "8:"
@@ -593,8 +604,8 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_5A56F82FCDE44DC6855031A301D8386B"
-            "Folder" = "8:_90D4A0DC45B74D099C76B7949C2AD5B4"
+            "Target" = "8:_B07267EA6A32442BB76F48515DE9591A"
+            "Folder" = "8:_BDB0343AD8E441B5B5F1FB5F5BF84FE1"
             "WorkingFolder" = "8:_AE40AD55EC64446CABA63E5B92EE4DF0"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -998,7 +1009,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_5A56F82FCDE44DC6855031A301D8386B"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B07267EA6A32442BB76F48515DE9591A"
             {
             "SourcePath" = "8:..\\Kutuphane_Otomasyonu_v2\\obj\\Debug\\Kutuphane_Otomasyonu_v2.exe"
             "TargetName" = "8:"
