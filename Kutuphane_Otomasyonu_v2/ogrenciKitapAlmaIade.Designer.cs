@@ -29,6 +29,7 @@ namespace Kutuphane_Otomasyonu_v2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ogrenciKitapAlmaIade));
             this.dgv_ogrenciListesi = new System.Windows.Forms.DataGridView();
             this.dgvKitapListesi = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -545,7 +546,9 @@ namespace Kutuphane_Otomasyonu_v2
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvKitapListesi);
             this.Controls.Add(this.dgv_ogrenciListesi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ogrenciKitapAlmaIade";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Öğrenci Kitap İade Emanet Sayfası";
             this.Load += new System.EventHandler(this.ogrenciKitapAlmaIade_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_ogrenciListesi)).EndInit();

@@ -29,6 +29,7 @@ namespace Kutuphane_Otomasyonu_v2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ogrenciSayfasi));
             this.btn_ogrenciEkle = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,12 +61,17 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_ogrenciEkle
             // 
+            this.btn_ogrenciEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ogrenciEkle.BackgroundImage")));
+            this.btn_ogrenciEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ogrenciEkle.FlatAppearance.BorderSize = 0;
+            this.btn_ogrenciEkle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciEkle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ogrenciEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ogrenciEkle.Location = new System.Drawing.Point(12, 351);
             this.btn_ogrenciEkle.Name = "btn_ogrenciEkle";
             this.btn_ogrenciEkle.Size = new System.Drawing.Size(181, 55);
             this.btn_ogrenciEkle.TabIndex = 8;
-            this.btn_ogrenciEkle.Text = "Öğrenci Ekle";
             this.btn_ogrenciEkle.UseVisualStyleBackColor = true;
             this.btn_ogrenciEkle.Click += new System.EventHandler(this.btn_ogrenciEkle_Click);
             // 
@@ -192,12 +198,17 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_ogrenciListele
             // 
+            this.btn_ogrenciListele.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ogrenciListele.BackgroundImage")));
+            this.btn_ogrenciListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ogrenciListele.FlatAppearance.BorderSize = 0;
+            this.btn_ogrenciListele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciListele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ogrenciListele.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ogrenciListele.Location = new System.Drawing.Point(676, 351);
             this.btn_ogrenciListele.Name = "btn_ogrenciListele";
             this.btn_ogrenciListele.Size = new System.Drawing.Size(181, 55);
             this.btn_ogrenciListele.TabIndex = 9;
-            this.btn_ogrenciListele.Text = "Öğrenci Listele";
             this.btn_ogrenciListele.UseVisualStyleBackColor = true;
             this.btn_ogrenciListele.Click += new System.EventHandler(this.btn_ogrenciListele_Click);
             // 
@@ -258,12 +269,17 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_ogrenciAra
             // 
+            this.btn_ogrenciAra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ogrenciAra.BackgroundImage")));
+            this.btn_ogrenciAra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_ogrenciAra.FlatAppearance.BorderSize = 0;
+            this.btn_ogrenciAra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciAra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ogrenciAra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_ogrenciAra.Location = new System.Drawing.Point(295, 25);
+            this.btn_ogrenciAra.Location = new System.Drawing.Point(295, 16);
             this.btn_ogrenciAra.Name = "btn_ogrenciAra";
-            this.btn_ogrenciAra.Size = new System.Drawing.Size(124, 32);
+            this.btn_ogrenciAra.Size = new System.Drawing.Size(61, 51);
             this.btn_ogrenciAra.TabIndex = 2;
-            this.btn_ogrenciAra.Text = "Öğrenci Ara";
             this.btn_ogrenciAra.UseVisualStyleBackColor = true;
             this.btn_ogrenciAra.Click += new System.EventHandler(this.btn_ogrenciAra_Click);
             // 
@@ -278,34 +294,49 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_ogrenciGuncelle
             // 
+            this.btn_ogrenciGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ogrenciGuncelle.BackgroundImage")));
+            this.btn_ogrenciGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ogrenciGuncelle.FlatAppearance.BorderSize = 0;
+            this.btn_ogrenciGuncelle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciGuncelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ogrenciGuncelle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ogrenciGuncelle.Location = new System.Drawing.Point(455, 351);
             this.btn_ogrenciGuncelle.Name = "btn_ogrenciGuncelle";
             this.btn_ogrenciGuncelle.Size = new System.Drawing.Size(181, 55);
             this.btn_ogrenciGuncelle.TabIndex = 10;
-            this.btn_ogrenciGuncelle.Text = "Öğrenci Güncelle";
             this.btn_ogrenciGuncelle.UseVisualStyleBackColor = true;
             this.btn_ogrenciGuncelle.Click += new System.EventHandler(this.btn_ogrenciGuncelle_Click);
             // 
             // btn_ogrenciSil
             // 
+            this.btn_ogrenciSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ogrenciSil.BackgroundImage")));
+            this.btn_ogrenciSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ogrenciSil.FlatAppearance.BorderSize = 0;
+            this.btn_ogrenciSil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciSil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ogrenciSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ogrenciSil.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ogrenciSil.Location = new System.Drawing.Point(230, 351);
             this.btn_ogrenciSil.Name = "btn_ogrenciSil";
             this.btn_ogrenciSil.Size = new System.Drawing.Size(181, 55);
             this.btn_ogrenciSil.TabIndex = 11;
-            this.btn_ogrenciSil.Text = "Öğrenci Sil";
             this.btn_ogrenciSil.UseVisualStyleBackColor = true;
             this.btn_ogrenciSil.Click += new System.EventHandler(this.btn_ogrenciSil_Click);
             // 
             // btn_anaEkranaDon
             // 
+            this.btn_anaEkranaDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_anaEkranaDon.BackgroundImage")));
+            this.btn_anaEkranaDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_anaEkranaDon.FlatAppearance.BorderSize = 0;
+            this.btn_anaEkranaDon.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_anaEkranaDon.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_anaEkranaDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_anaEkranaDon.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_anaEkranaDon.Location = new System.Drawing.Point(903, 351);
             this.btn_anaEkranaDon.Name = "btn_anaEkranaDon";
             this.btn_anaEkranaDon.Size = new System.Drawing.Size(181, 55);
             this.btn_anaEkranaDon.TabIndex = 12;
-            this.btn_anaEkranaDon.Text = "Ana Ekrana Dön";
             this.btn_anaEkranaDon.UseVisualStyleBackColor = true;
             this.btn_anaEkranaDon.Click += new System.EventHandler(this.btn_anaEkranaDon_Click);
             // 
@@ -322,7 +353,9 @@ namespace Kutuphane_Otomasyonu_v2
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btn_ogrenciListele);
             this.Controls.Add(this.btn_ogrenciEkle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ogrenciSayfasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Öğrenci Sayfası";
             this.Load += new System.EventHandler(this.ogrenciSayfasi_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

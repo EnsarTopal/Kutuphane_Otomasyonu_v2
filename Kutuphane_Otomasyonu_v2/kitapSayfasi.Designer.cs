@@ -29,6 +29,7 @@ namespace Kutuphane_Otomasyonu_v2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(kitapSayfasi));
             this.txt_kitapAdi = new System.Windows.Forms.TextBox();
             this.txt_kitapNumarasi = new System.Windows.Forms.TextBox();
             this.txt_kitapYazari = new System.Windows.Forms.TextBox();
@@ -49,9 +50,9 @@ namespace Kutuphane_Otomasyonu_v2
             this.btn_kitapListele = new System.Windows.Forms.Button();
             this.btn_anaEkran = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_kitapAra = new System.Windows.Forms.Button();
-            this.cmbox_kitapAra = new System.Windows.Forms.ComboBox();
             this.txt_kitapAra = new System.Windows.Forms.TextBox();
+            this.cmbox_kitapAra = new System.Windows.Forms.ComboBox();
+            this.btn_kitapAra = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -200,56 +201,81 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_kitapEkle
             // 
+            this.btn_kitapEkle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapEkle.BackgroundImage")));
+            this.btn_kitapEkle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_kitapEkle.FlatAppearance.BorderSize = 0;
+            this.btn_kitapEkle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapEkle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapEkle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kitapEkle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_kitapEkle.Location = new System.Drawing.Point(12, 363);
             this.btn_kitapEkle.Name = "btn_kitapEkle";
             this.btn_kitapEkle.Size = new System.Drawing.Size(181, 55);
             this.btn_kitapEkle.TabIndex = 7;
-            this.btn_kitapEkle.Text = "Kitap Ekle";
             this.btn_kitapEkle.UseVisualStyleBackColor = true;
             this.btn_kitapEkle.Click += new System.EventHandler(this.btn_kitapEkle_Click);
             // 
             // btn_kitapSil
             // 
+            this.btn_kitapSil.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapSil.BackgroundImage")));
+            this.btn_kitapSil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_kitapSil.FlatAppearance.BorderSize = 0;
+            this.btn_kitapSil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapSil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapSil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kitapSil.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_kitapSil.Location = new System.Drawing.Point(233, 363);
             this.btn_kitapSil.Name = "btn_kitapSil";
             this.btn_kitapSil.Size = new System.Drawing.Size(181, 55);
             this.btn_kitapSil.TabIndex = 8;
-            this.btn_kitapSil.Text = "Kitap Sil";
             this.btn_kitapSil.UseVisualStyleBackColor = true;
             this.btn_kitapSil.Click += new System.EventHandler(this.btn_kitapSil_Click);
             // 
             // btn_kitapGuncelle
             // 
+            this.btn_kitapGuncelle.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapGuncelle.BackgroundImage")));
+            this.btn_kitapGuncelle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_kitapGuncelle.FlatAppearance.BorderSize = 0;
+            this.btn_kitapGuncelle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapGuncelle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapGuncelle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kitapGuncelle.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_kitapGuncelle.Location = new System.Drawing.Point(453, 363);
             this.btn_kitapGuncelle.Name = "btn_kitapGuncelle";
             this.btn_kitapGuncelle.Size = new System.Drawing.Size(181, 55);
             this.btn_kitapGuncelle.TabIndex = 9;
-            this.btn_kitapGuncelle.Text = "Kitap Güncelle";
             this.btn_kitapGuncelle.UseVisualStyleBackColor = true;
             this.btn_kitapGuncelle.Click += new System.EventHandler(this.btn_kitapGuncelle_Click);
             // 
             // btn_kitapListele
             // 
+            this.btn_kitapListele.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapListele.BackgroundImage")));
+            this.btn_kitapListele.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_kitapListele.FlatAppearance.BorderSize = 0;
+            this.btn_kitapListele.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapListele.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapListele.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kitapListele.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_kitapListele.Location = new System.Drawing.Point(674, 363);
             this.btn_kitapListele.Name = "btn_kitapListele";
             this.btn_kitapListele.Size = new System.Drawing.Size(181, 55);
             this.btn_kitapListele.TabIndex = 10;
-            this.btn_kitapListele.Text = "Kitap Listele";
             this.btn_kitapListele.UseVisualStyleBackColor = true;
             this.btn_kitapListele.Click += new System.EventHandler(this.btn_kitapListele_Click);
             // 
             // btn_anaEkran
             // 
+            this.btn_anaEkran.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_anaEkran.BackgroundImage")));
+            this.btn_anaEkran.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_anaEkran.FlatAppearance.BorderSize = 0;
+            this.btn_anaEkran.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_anaEkran.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_anaEkran.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_anaEkran.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_anaEkran.Location = new System.Drawing.Point(894, 363);
             this.btn_anaEkran.Name = "btn_anaEkran";
             this.btn_anaEkran.Size = new System.Drawing.Size(181, 55);
             this.btn_anaEkran.TabIndex = 11;
-            this.btn_anaEkran.Text = "Ana Ekrana Dön";
             this.btn_anaEkran.UseVisualStyleBackColor = true;
             this.btn_anaEkran.Click += new System.EventHandler(this.btn_anaEkran_Click);
             // 
@@ -265,16 +291,14 @@ namespace Kutuphane_Otomasyonu_v2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Kitap Ara";
             // 
-            // btn_kitapAra
+            // txt_kitapAra
             // 
-            this.btn_kitapAra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_kitapAra.Location = new System.Drawing.Point(215, 54);
-            this.btn_kitapAra.Name = "btn_kitapAra";
-            this.btn_kitapAra.Size = new System.Drawing.Size(181, 55);
-            this.btn_kitapAra.TabIndex = 0;
-            this.btn_kitapAra.Text = "ARA";
-            this.btn_kitapAra.UseVisualStyleBackColor = true;
-            this.btn_kitapAra.Click += new System.EventHandler(this.btn_kitapAra_Click);
+            this.txt_kitapAra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txt_kitapAra.Location = new System.Drawing.Point(11, 61);
+            this.txt_kitapAra.Name = "txt_kitapAra";
+            this.txt_kitapAra.Size = new System.Drawing.Size(170, 26);
+            this.txt_kitapAra.TabIndex = 2;
+            this.txt_kitapAra.TextChanged += new System.EventHandler(this.txt_kitapAra_TextChanged);
             // 
             // cmbox_kitapAra
             // 
@@ -291,14 +315,21 @@ namespace Kutuphane_Otomasyonu_v2
             this.cmbox_kitapAra.TabIndex = 1;
             this.cmbox_kitapAra.SelectedIndexChanged += new System.EventHandler(this.cmbox_kitapAra_SelectedIndexChanged);
             // 
-            // txt_kitapAra
+            // btn_kitapAra
             // 
-            this.txt_kitapAra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txt_kitapAra.Location = new System.Drawing.Point(11, 61);
-            this.txt_kitapAra.Name = "txt_kitapAra";
-            this.txt_kitapAra.Size = new System.Drawing.Size(170, 26);
-            this.txt_kitapAra.TabIndex = 2;
-            this.txt_kitapAra.TextChanged += new System.EventHandler(this.txt_kitapAra_TextChanged);
+            this.btn_kitapAra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapAra.BackgroundImage")));
+            this.btn_kitapAra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_kitapAra.FlatAppearance.BorderSize = 0;
+            this.btn_kitapAra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapAra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_kitapAra.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_kitapAra.Location = new System.Drawing.Point(215, 32);
+            this.btn_kitapAra.Name = "btn_kitapAra";
+            this.btn_kitapAra.Size = new System.Drawing.Size(142, 55);
+            this.btn_kitapAra.TabIndex = 0;
+            this.btn_kitapAra.UseVisualStyleBackColor = true;
+            this.btn_kitapAra.Click += new System.EventHandler(this.btn_kitapAra_Click);
             // 
             // kitapSayfasi
             // 
@@ -313,7 +344,9 @@ namespace Kutuphane_Otomasyonu_v2
             this.Controls.Add(this.btn_kitapEkle);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "kitapSayfasi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KİTAP SAYFASI";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

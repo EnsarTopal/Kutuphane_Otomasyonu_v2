@@ -16,7 +16,7 @@ namespace Kutuphane_Otomasyonu_v2
         {
             InitializeComponent();
         }
-
+        
         private void btn_ogrenciIslemleri_Click(object sender, EventArgs e)
         {
             ogrenciSayfasi frmOgrenciSayfasi = new ogrenciSayfasi();

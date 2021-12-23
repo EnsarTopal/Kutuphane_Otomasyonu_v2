@@ -29,6 +29,7 @@ namespace Kutuphane_Otomasyonu_v2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(almaVermeGosterim));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbBox_iadeKitapAra = new System.Windows.Forms.ComboBox();
             this.txt_iadeKitap = new System.Windows.Forms.TextBox();
@@ -107,12 +108,17 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_iadeKitapAra
             // 
+            this.btn_iadeKitapAra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_iadeKitapAra.BackgroundImage")));
+            this.btn_iadeKitapAra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_iadeKitapAra.FlatAppearance.BorderSize = 0;
+            this.btn_iadeKitapAra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_iadeKitapAra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_iadeKitapAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_iadeKitapAra.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_iadeKitapAra.Location = new System.Drawing.Point(233, 99);
             this.btn_iadeKitapAra.Name = "btn_iadeKitapAra";
             this.btn_iadeKitapAra.Size = new System.Drawing.Size(167, 41);
             this.btn_iadeKitapAra.TabIndex = 0;
-            this.btn_iadeKitapAra.Text = "Kitap Ara";
             this.btn_iadeKitapAra.UseVisualStyleBackColor = true;
             this.btn_iadeKitapAra.Click += new System.EventHandler(this.btn_iadeKitapAra_Click);
             // 
@@ -190,34 +196,49 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_kitapAra
             // 
+            this.btn_kitapAra.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapAra.BackgroundImage")));
+            this.btn_kitapAra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_kitapAra.FlatAppearance.BorderSize = 0;
+            this.btn_kitapAra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapAra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapAra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_kitapAra.Font = new System.Drawing.Font("Times New Roman", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_kitapAra.Location = new System.Drawing.Point(244, 99);
             this.btn_kitapAra.Name = "btn_kitapAra";
             this.btn_kitapAra.Size = new System.Drawing.Size(167, 41);
             this.btn_kitapAra.TabIndex = 0;
-            this.btn_kitapAra.Text = "Kitap Listele";
             this.btn_kitapAra.UseVisualStyleBackColor = true;
             this.btn_kitapAra.Click += new System.EventHandler(this.btn_kitapAra_Click);
             // 
             // btn_ana
             // 
+            this.btn_ana.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_ana.BackgroundImage")));
+            this.btn_ana.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_ana.FlatAppearance.BorderSize = 0;
+            this.btn_ana.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ana.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ana.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_ana.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_ana.Location = new System.Drawing.Point(1047, 514);
             this.btn_ana.Name = "btn_ana";
             this.btn_ana.Size = new System.Drawing.Size(173, 50);
             this.btn_ana.TabIndex = 4;
-            this.btn_ana.Text = "ANA SAYFA";
             this.btn_ana.UseVisualStyleBackColor = true;
             this.btn_ana.Click += new System.EventHandler(this.btn_ana_Click);
             // 
             // btn_tumKitaplar
             // 
+            this.btn_tumKitaplar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_tumKitaplar.BackgroundImage")));
+            this.btn_tumKitaplar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_tumKitaplar.FlatAppearance.BorderSize = 0;
+            this.btn_tumKitaplar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_tumKitaplar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_tumKitaplar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tumKitaplar.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_tumKitaplar.Location = new System.Drawing.Point(12, 514);
             this.btn_tumKitaplar.Name = "btn_tumKitaplar";
             this.btn_tumKitaplar.Size = new System.Drawing.Size(173, 50);
             this.btn_tumKitaplar.TabIndex = 4;
-            this.btn_tumKitaplar.Text = "TÜM KİTAPLAR";
             this.btn_tumKitaplar.UseVisualStyleBackColor = true;
             this.btn_tumKitaplar.Click += new System.EventHandler(this.btn_tumKitaplar_Click);
             // 
@@ -232,7 +253,9 @@ namespace Kutuphane_Otomasyonu_v2
             this.Controls.Add(this.dgv_IadeKitap);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "almaVermeGosterim";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "almaVermeGosterim";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -20,9 +20,7 @@ namespace Kutuphane_Otomasyonu_v2
             InitializeComponent();
         }
         string konum = "";
-        alımIadeIslemleri islemler = new alımIadeIslemleri();
-        ogrenciIslem ogrIslem = new ogrenciIslem();
-        kitapIslem ktpIslem = new kitapIslem();
+        alımIadeIslemleri islemler = new alımIadeIslemleri();       
         private void btn_anaSayfa_Click(object sender, EventArgs e)
         {
             anaEkran frmAna = new anaEkran();
@@ -35,6 +33,7 @@ namespace Kutuphane_Otomasyonu_v2
             //öğrenci tablosundan istediğimiz verileri çekip datagridview'e yüklüyoruz.
             try
             {
+                ogrenciIslem ogrIslem = new ogrenciIslem();
                 List<ogrenciler> ogr = ogrIslem.ogrenci_goster(txt_ogrenciArama.Text);
                 dgv_ogrenciListesi.DataSource = ogr;
                 MessageBox.Show("Arama başarılı!");
@@ -50,6 +49,7 @@ namespace Kutuphane_Otomasyonu_v2
             //kitap tablosundan istediğimiz verileri çekip datagridview'e yüklüyoruz.
             try
             {
+                kitapIslem ktpIslem = new kitapIslem();
                 List<kitaplar> ktp = ktpIslem.kitaplariGoster(txt_kitapBilgisi.Text, konum);
                 dgvKitapListesi.DataSource = ktp;
             }
@@ -62,7 +62,6 @@ namespace Kutuphane_Otomasyonu_v2
         private void btn_emanetVer_Click(object sender, EventArgs e)
         {
             dTP_emanetVerilenTarih.Value = DateTime.Now;
-
             //emanetVermeIslemi fonksiyonuna gerekli parametreleri göndererek emanet verme işlemini yapıyoruz.
             try
             {
@@ -88,14 +87,14 @@ namespace Kutuphane_Otomasyonu_v2
 
         private void ogrenciKitapAlmaIade_Load(object sender, EventArgs e)
         {
-            txt_geriGetirilmesiGerekenTarih.Text = DateTime.Now.AddDays(30).ToShortDateString();
+            txt_geriGetirilmesiGerekenTarih.Text = DateTime.Now.AddDays(30).ToShortDateString();            
         }
 
         private void btn_kitapEmanetListesi_Click(object sender, EventArgs e)
         {
             //kitapAlmaVerme tablosundaki verileri datagridview'e yüklemek için bu fonksiyonu kullanıyoruz.
             listele();
-            // emanet_ve_iade_renk();
+            databaseRenklendir();
         }
 
         private void btn_iadeOgrenciArama_Click_1(object sender, EventArgs e)
@@ -137,24 +136,6 @@ namespace Kutuphane_Otomasyonu_v2
             DateTime geriGelenTarih = Convert.ToDateTime(txt_iadeEdilenTarih.Text);
             DateTime iadegelentarih = Convert.ToDateTime(kitap.iadeTarihi);
             TimeSpan sonuc = geriGelenTarih - iadegelentarih;
-            if (sonuc.TotalDays >= 0) //zaman farkını eksi olamaması kontrol edildi
-            {
-                //Burayı sonra yap!!!//listeRenklendirme();  // tablo satırları renklendirildi
-                if (sonuc.TotalDays > 5)  // teslim süresi 5 günü geçmiş ise ceza işlemi uygulandı
-                {
-                    float ceza = float.Parse(sonuc.TotalDays.ToString()) - 15;  //15 gün teslim süresini aşanlara hergün için 1 tl kesildi
-                    float iade = Convert.ToInt32(kitap.borc); //Ceza bilgisi çekildi
-                    iade += ceza; //üzerine ekleme yapıldı     
-                    islemler.iadeTablosuDuzenle(int.Parse(txt_iadeKitapId.Text), int.Parse(txt_iadeOgrenciId.Text), iade);
-                    MessageBox.Show("iade → " + iade + "ceza → " + ceza);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Teslim tarihi alım tarihinden önce olamaz!");
-            }
-
-            #region iade_islemi
             //tablo_iade_duzenleme fonksiyonuna gerekli parametreleri göndererek iade etme işlemini yapıyoruz. 
             try
             {
@@ -164,15 +145,29 @@ namespace Kutuphane_Otomasyonu_v2
                     int.Parse(txt_iadeOgrenciId.Text),
                     "iade", txt_iadeEdilenTarih.Text
                     );
+                if (sonuc.TotalDays >= 0) //zaman farkını eksi olamaması kontrol edildi
+                {                    
+                    if (sonuc.TotalDays > 5)  // teslim süresi 5 günü geçmiş ise ceza işlemi uygulandı
+                    {
+                        float ceza = float.Parse(sonuc.TotalDays.ToString()) - 15;  //15 gün teslim süresini aşanlara hergün için 1 tl kesildi
+                        float iade = Convert.ToInt32(kitap.borc); //Ceza bilgisi çekildi
+                        iade += ceza; //üzerine ekleme yapıldı     
+                        islemler.iadeTablosuDuzenle(int.Parse(txt_iadeKitapId.Text), int.Parse(txt_iadeOgrenciId.Text), iade);
+                        MessageBox.Show("iade → " + iade + "ceza → " + ceza);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Teslim tarihi alım tarihinden önce olamaz!");
+                }
                 MessageBox.Show("İade başarılı!");
+                listele();
             }
             catch
             {
                 MessageBox.Show("İade işlemi için lütfen alanları doldurunuz!");
             } //teslim işlemi gerçekleştirildi
-            listele();
-            #endregion
-
+            databaseRenklendir();
         }
 
         private void dgv_emanetListesi_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -189,29 +184,29 @@ namespace Kutuphane_Otomasyonu_v2
             dgv_emanetListesi.DataSource = listele;
         }
 
-        public void emanet_ve_iade_renk()
+        public void databaseRenklendir()
         {
             double ceza = 0;
             for (int i = 0; i < dgv_emanetListesi.Rows.Count; i++)
             {
                 ceza = double.Parse(dgv_emanetListesi.Rows[i].Cells[5].Value.ToString());
                 dgv_emanetListesi.Rows[i].Cells[5].Value = ceza.ToString("c");
-                string islemTuru = dgv_emanetListesi.Rows[i].Cells[6].Value.ToString();
+                string islem_turu = dgv_emanetListesi.Rows[i].Cells[6].Value.ToString();
 
                 //eğer islem_turu iade'ye eşitse ilgili satırlar yeşil olur.
-                if (islemTuru == "iade")
+                if (islem_turu == "iade")
                 {
                     dgv_emanetListesi.Rows[i].DefaultCellStyle.BackColor = Color.Green;
                     dgv_emanetListesi.Rows[i].DefaultCellStyle.ForeColor = Color.Black;
                 }
 
                 //almaverme tablosundaki islem_turu iadeye eşit değilse tarihsel işlemler aşağıdaki gibi yapılır.
-                if (islemTuru != "iade")
+                if (islem_turu != "iade")
                 {
                     string t1, t2; DateTime s1, s2;
                     t1 = DateTime.Now.ToShortDateString();
-                    DateTime iadeTarihi = DateTime.Parse(dgv_emanetListesi.Rows[i].Cells[3].Value.ToString());
-                    t2 = iadeTarihi.ToShortDateString();
+                    DateTime t3 = Convert.ToDateTime(dgv_emanetListesi.Rows[i].Cells[3].Value.ToString());                    
+                    t2 = t3.ToShortDateString();
                     TimeSpan fark;
                     s1 = DateTime.Parse(t1);
                     s2 = DateTime.Parse(t2);
@@ -232,6 +227,5 @@ namespace Kutuphane_Otomasyonu_v2
                 }
             }
         }
-
     }
 }

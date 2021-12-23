@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>bookshelf.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -164,6 +167,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bookshelf.ico" />
     <Content Include="License-LGPL.txt" />
   </ItemGroup>
   <ItemGroup />

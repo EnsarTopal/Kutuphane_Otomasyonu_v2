@@ -140,7 +140,9 @@ namespace Kutuphane_Otomasyonu_v2
             this.Controls.Add(this.btn_anaSayfa);
             this.Controls.Add(this.btn_tumKayitlar);
             this.Controls.Add(this.groupBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ogrenciAlmaVermeGosterimi";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ogrenciAlmaVermeGosterimi";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
