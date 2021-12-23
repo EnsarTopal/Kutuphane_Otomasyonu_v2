@@ -348,6 +348,7 @@ namespace Kutuphane_Otomasyonu_v2
             this.Name = "kitapSayfasi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KİTAP SAYFASI";
+            this.Load += new System.EventHandler(this.kitapSayfasi_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

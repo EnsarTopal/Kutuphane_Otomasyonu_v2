@@ -149,7 +149,7 @@ namespace Kutuphane_Otomasyonu_v2
                 {                    
                     if (sonuc.TotalDays > 5)  // teslim süresi 5 günü geçmiş ise ceza işlemi uygulandı
                     {
-                        float ceza = float.Parse(sonuc.TotalDays.ToString()) - 15;  //15 gün teslim süresini aşanlara hergün için 1 tl kesildi
+                        float ceza = float.Parse(sonuc.TotalDays.ToString());
                         float iade = Convert.ToInt32(kitap.borc); //Ceza bilgisi çekildi
                         iade += ceza; //üzerine ekleme yapıldı     
                         islemler.iadeTablosuDuzenle(int.Parse(txt_iadeKitapId.Text), int.Parse(txt_iadeOgrenciId.Text), iade);

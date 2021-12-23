@@ -507,11 +507,16 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_anaSayfa
             // 
-            this.btn_anaSayfa.Location = new System.Drawing.Point(12, 428);
+            this.btn_anaSayfa.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_anaSayfa.BackgroundImage")));
+            this.btn_anaSayfa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btn_anaSayfa.FlatAppearance.BorderSize = 0;
+            this.btn_anaSayfa.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_anaSayfa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_anaSayfa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_anaSayfa.Location = new System.Drawing.Point(12, 448);
             this.btn_anaSayfa.Name = "btn_anaSayfa";
-            this.btn_anaSayfa.Size = new System.Drawing.Size(143, 53);
+            this.btn_anaSayfa.Size = new System.Drawing.Size(143, 73);
             this.btn_anaSayfa.TabIndex = 3;
-            this.btn_anaSayfa.Text = "ANA SAYFA";
             this.btn_anaSayfa.UseVisualStyleBackColor = true;
             this.btn_anaSayfa.Click += new System.EventHandler(this.btn_anaSayfa_Click);
             // 
@@ -526,11 +531,16 @@ namespace Kutuphane_Otomasyonu_v2
             // 
             // btn_kitapEmanetListesi
             // 
-            this.btn_kitapEmanetListesi.Location = new System.Drawing.Point(12, 487);
+            this.btn_kitapEmanetListesi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_kitapEmanetListesi.BackgroundImage")));
+            this.btn_kitapEmanetListesi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btn_kitapEmanetListesi.FlatAppearance.BorderSize = 0;
+            this.btn_kitapEmanetListesi.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapEmanetListesi.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_kitapEmanetListesi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_kitapEmanetListesi.Location = new System.Drawing.Point(12, 565);
             this.btn_kitapEmanetListesi.Name = "btn_kitapEmanetListesi";
-            this.btn_kitapEmanetListesi.Size = new System.Drawing.Size(143, 53);
+            this.btn_kitapEmanetListesi.Size = new System.Drawing.Size(143, 72);
             this.btn_kitapEmanetListesi.TabIndex = 5;
-            this.btn_kitapEmanetListesi.Text = "Emanet Listesini Görüntüle";
             this.btn_kitapEmanetListesi.UseVisualStyleBackColor = true;
             this.btn_kitapEmanetListesi.Click += new System.EventHandler(this.btn_kitapEmanetListesi_Click);
             // 

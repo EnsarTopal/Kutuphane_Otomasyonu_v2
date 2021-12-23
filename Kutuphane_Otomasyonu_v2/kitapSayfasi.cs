@@ -165,5 +165,14 @@ namespace Kutuphane_Otomasyonu_v2
         {
             //txt_kitapAra.Text = "";
         }
+
+        private void kitapSayfasi_Load(object sender, EventArgs e)
+        {
+            List<kitaplar> kitaplar = kitapIslemleri.kitaplariGoster();
+            if (kitaplar != null)
+            {
+                dataGridView1.DataSource = kitaplar;
+            }
+        }
     }
 }
